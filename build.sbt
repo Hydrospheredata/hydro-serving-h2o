@@ -1,6 +1,6 @@
 name := "serving-h2o-runtime"
 
-version := "0.1"
+version := IO.read(file("version"))
 
 scalaVersion := "2.12.7"
 
