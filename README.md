@@ -19,3 +19,5 @@ public enum ModelCategory {
   AnomalyDetection
 }
 ```
+
+More about MOJO and Productionizing H2O - http://docs.h2o.ai/h2o/latest-stable/h2o-docs/productionizing.html
