@@ -16,8 +16,4 @@ object RowDataOps {
     row.putAll(rowNewData.asJava)
     row
   }
-
-  def toTensorMap(rowData: RowData): Map[String, TensorProto] = {
-   ???
-  }
 }

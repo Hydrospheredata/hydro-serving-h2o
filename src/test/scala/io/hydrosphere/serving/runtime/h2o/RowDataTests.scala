@@ -1,6 +1,5 @@
 package io.hydrosphere.serving.runtime.h2o
 
-import hex.genmodel.easy.RowData
 import io.hydrosphere.serving.runtime.h2o.core.data.RowDataOps
 import io.hydrosphere.serving.tensorflow.TensorShape
 import io.hydrosphere.serving.tensorflow.api.predict.PredictRequest
@@ -19,18 +18,6 @@ class RowDataTests extends FunSpec {
       val rowData = RowDataOps.fromTensorMap(request.inputs)
       assert(rowData.containsKey("input-a"))
       assert(rowData.containsKey("input-b"))
-    }
-
-    it("should convert RowData to Map[String, TensorProto]") {
-      val rowData = new RowData()
-      rowData.put("input-a", List(1, 2, 3, 4))
-      rowData.put("input-b", List("hello", "world"))
-      rowData.put("input-c", "scalar")
-
-      val tensorMap = RowDataOps.toTensorMap(rowData)
-      assert(tensorMap.contains("input-a"))
-      assert(tensorMap.contains("input-b"))
-      assert(tensorMap.contains("input-c"))
     }
   }
 }
